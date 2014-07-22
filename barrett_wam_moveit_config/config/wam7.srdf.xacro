@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="wam">
+  <xacro:include filename="$(find barrett_wam_moveit_config)/config/wam_top.srdf.xacro"/>
+
+  <xacro:wam_7dof prefix="$(arg prefix)"/>
+
+  <xacro:if value="$(arg hand)">
+    <xacro:bhand prefix="$(arg prefix)/hand" wam_prefix="$(arg prefix)"/>
+  </xacro:if>
+  <xacro:if value="$(arg ball)">
+    <xacro:bball prefix="$(arg prefix)/ball"/>
+  </xacro:if>
+
+</robot>
