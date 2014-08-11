@@ -6,7 +6,7 @@
   <arg name="robot_description" default="robot_description"/>
 
   <arg name="urdf_prefix" default="wam"/>
-  <arg name="ee_empty" default="true"/>
+  <arg name="ee_empty" default="false"/>
   <arg name="ee_hand" default="false"/>
   <arg name="ee_ball" default="false"/>
 

@@ -22,7 +22,7 @@
     </xacro:if>
     <!-- Include the semantic description of the ball links -->
     <xacro:if value="$(arg ball)">
-      <xacro:bball_joints prefix="$(arg prefix)/ball"/>
+      <xacro:bball_joints prefix="$(arg prefix)/ball" wam_prefix="$(arg prefix)"/>
     </xacro:if>
   </group>
 
@@ -44,8 +44,8 @@
 
   <!-- Include the specification of the ball end-effector and collision descriptions -->
   <xacro:if value="$(arg ball)">
-    <xacro:bball_ee prefix="$(arg prefix)/ball"/>
-    <xacro:bball_collisions prefix="$(arg prefix)/ball"/>
+    <xacro:bball_ee prefix="$(arg prefix)/ball" wam_prefix="$(arg prefix)"/>
+    <!--<xacro:bball_collisions prefix="$(arg prefix)/ball"/>-->
   </xacro:if>
 
 </robot>
