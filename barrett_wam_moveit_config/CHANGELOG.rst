@@ -2,8 +2,8 @@
 Changelog for package barrett_wam_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.0 (2014-12-08)
+------------------
 * updating ball srdf with proper collision flags
 * adding ball details, options to move_group
 * Contributors: Jonathan Bohren
