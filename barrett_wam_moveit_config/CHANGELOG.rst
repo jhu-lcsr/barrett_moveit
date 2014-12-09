@@ -2,6 +2,11 @@
 Changelog for package barrett_wam_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* adding collision flag for barrett wam palm
+* Contributors: Jonathan Bohren
+
 0.3.0 (2014-12-08)
 ------------------
 * updating ball srdf with proper collision flags
