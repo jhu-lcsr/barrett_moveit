@@ -2,8 +2,8 @@
 Changelog for package barrett_wam_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.1 (2014-12-09)
+------------------
 * adding collision flag for barrett wam palm
 * Contributors: Jonathan Bohren
 
