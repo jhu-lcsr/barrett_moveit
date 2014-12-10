@@ -1,0 +1,9 @@
+sensors:
+ - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+   point_cloud_topic: /camera/depth_registered/points
+   max_range: 5.0
+   padding_offset: 0
+   padding_scale: 1
+   point_subsample: 1
+   #NOTE: filtered_cloud_topic apparently causes a slowdown, use rtealtime_urdf_filter instead
+   #filtered_cloud_topic: output_cloud
