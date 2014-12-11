@@ -1,22 +1,22 @@
 sensors:
- - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
-   point_cloud_topic: /camera/depth_registered/points
-   max_range: 5.0
-   padding_offset: 0
-   padding_scale: 1
-   point_subsample: 1
-   #NOTE: filtered_cloud_topic apparently causes a slowdown, use rtealtime_urdf_filter instead
-   #filtered_cloud_topic: output_cloud
- - sensor_plugin_alt: occupancy_map_monitor/DepthImageOctomapUpdater
-   image_topic: /camera/depth_registered/image_raw
-   queue_size: 5
+ #- sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+   #point_cloud_topic: /camera/depth_registered/points
+   #max_range: 5.0
+   #padding_offset: 0
+   #padding_scale: 1
+   #point_subsample: 1
+   ##NOTE: filtered_cloud_topic apparently causes a slowdown, use rtealtime_urdf_filter instead
+   ##filtered_cloud_topic: output_cloud
+ - sensor_plugin: occupancy_map_monitor/DepthImageOctomapUpdater
+   image_topic: /camera/depth_registered_filtered/hw_registered/image_rect_raw
+   queue_size: 1
    near_clipping_plane_distance: 0.3
    far_clipping_plane_distance: 5.0
    skip_vertical_pixels: 1
    skip_horizontal_pixels: 1
    shadow_threshold: 0.2
-   padding_scale: 4.0
-   padding_offset: 0.03
-   filtered_cloud_topic: output_cloud
+   #padding_scale: 1.0
+   #padding_offset: 0.0
+   #filtered_cloud_topic: output_cloud
 
 
