@@ -2,5 +2,5 @@
   <!-- TODO: add arg for tf prefix -->
   <param name="octomap_frame" type="string" value="/wam/base_link" />
   <param name="octomap_resolution" type="double" value="0.025" />
-  <rosparam command="load" file="$(find barrett_wam_moveit_config)/config/sensors_rgbd.yaml" />
+  <!--<rosparam command="load" file="$(find barrett_wam_moveit_config)/config/sensors_rgbd.yaml" />-->
 </launch>
