@@ -8,12 +8,12 @@ joint_limits:
     has_velocity_limits: true
     max_velocity: 1.5
     has_acceleration_limits: true
-    max_acceleration: 0.25
+    max_acceleration: 0.15
   wam/wrist_yaw_joint:
     has_velocity_limits: true
     max_velocity: 1.5
     has_acceleration_limits: true
-    max_acceleration: 0.25
+    max_acceleration: 0.15
   wam/shoulder_yaw_joint:
     has_velocity_limits: true
     max_velocity: 1.5
