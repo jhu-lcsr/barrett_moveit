@@ -43,6 +43,7 @@
     <disable_collisions link1="${prefix}/bhand_palm_link" link2="${wam_prefix}/wrist_yaw_link" reason="Never" />
     <disable_collisions link1="${prefix}/bhand_palm_link" link2="${wam_prefix}/wrist_pitch_link" reason="Never" />
     <disable_collisions link1="${prefix}/bhand_palm_link" link2="${wam_prefix}/wrist_palm_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}/bhand_palm_link" link2="${wam_prefix}/bhand_grasp_link" reason="Adjacent" />
   </xacro:macro>
 
   <xacro:macro name="bhand_finger_prox" params="prefix finger wam_prefix">
@@ -53,6 +54,8 @@
     <disable_collisions link1="${prefix}/finger_${finger}/prox_link" link2="${prefix}/bhand_palm_link" reason="Adjacent" />
 
     <disable_collisions link1="${prefix}/finger_${finger}/prox_link" link2="${prefix}/finger_3/dist_link" reason="Fingers" />
+
+    <disable_collisions link1="${prefix}/finger_${finger}/prox_link" link2="${wam_prefix}/bhand_grasp_link" reason="Adjacent" />
   </xacro:macro>
 
   <xacro:macro name="bhand_finger_med" params="prefix finger prox wam_prefix">
@@ -64,6 +67,8 @@
     <xacro:if value="${prox}">
       <disable_collisions link1="${prefix}/finger_${finger}/med_link" link2="${prefix}/finger_${finger}/prox_link" reason="Adjacent" />
     </xacro:if>
+
+    <disable_collisions link1="${prefix}/finger_${finger}/med_link" link2="${wam_prefix}/bhand_grasp_link" reason="Adjacent" />
   </xacro:macro>
 
   <xacro:macro name="bhand_finger_dist" params="prefix finger other_a other_b prox wam_prefix">
@@ -76,6 +81,8 @@
     <xacro:if value="${prox}">
       <disable_collisions link1="${prefix}/finger_${finger}/dist_link" link2="${prefix}/finger_${finger}/prox_link" reason="Never" />
     </xacro:if>
+
+    <disable_collisions link1="${prefix}/finger_${finger}/dist_link" link2="${wam_prefix}/bhand_grasp_link" reason="Adjacent" />
 
     <!-- other fingers -->
     <disable_collisions link1="${prefix}/finger_${finger}/dist_link" link2="${prefix}/finger_${other_a}/dist_link" reason="Adjacent" />
