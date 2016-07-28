@@ -43,6 +43,8 @@
     <!-- Set the display variable, in case OpenGL code is used internally -->
     <env name="DISPLAY" value="$(optenv DISPLAY :0)" />
 
+    <remap from="robot_description" to="/robot_description"/>
+
     <remap from="joint_states" to="$(arg joint_states_topic)"/>
 
     <param name="allow_trajectory_execution" value="$(arg allow_trajectory_execution)"/>
