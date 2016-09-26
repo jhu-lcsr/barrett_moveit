@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="wam">
+  <xacro:include filename="$(find barrett_wam_moveit_config)/config/wam_top.srdf.xacro"/>
+
+  <!-- Include the specification of the hand end-effector and collision descriptions -->
+  <!--<xacro:bhand_ee prefix="$(arg prefix)/hand" wam_prefix="$(arg prefix)"/>-->
+  <xacro:bhand_collisions prefix="$(arg prefix)/bhand" wam_prefix="$(arg prefix)"/>
+
+</robot>
