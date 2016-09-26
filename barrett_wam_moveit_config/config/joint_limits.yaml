@@ -1,36 +1,10 @@
+#max_velocities: [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]
+#max_accelerations: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
 joint_limits:
-  wam/shoulder_pitch_joint:
-    has_velocity_limits: true
-    max_velocity: 1.5
-    has_acceleration_limits: true
-    max_acceleration: 0.1
-  wam/wrist_pitch_joint:
-    has_velocity_limits: true
-    max_velocity: 1.5
-    has_acceleration_limits: true
-    max_acceleration: 0.15
-  wam/wrist_yaw_joint:
-    has_velocity_limits: true
-    max_velocity: 1.5
-    has_acceleration_limits: true
-    max_acceleration: 0.15
-  wam/shoulder_yaw_joint:
-    has_velocity_limits: true
-    max_velocity: 1.5
-    has_acceleration_limits: true
-    max_acceleration: 0.1
-  wam/palm_yaw_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 0.15
-  wam/elbow_pitch_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 0.1
-  wam/base_yaw_joint:
-    has_velocity_limits: true
-    max_velocity: 1.0
-    has_acceleration_limits: true
-    max_acceleration: 0.1
+  wam/base_yaw_joint:       {max_velocity: 2.0, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
+  wam/shoulder_pitch_joint: {max_velocity: 2.0, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
+  wam/shoulder_yaw_joint:   {max_velocity: 2.0, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
+  wam/elbow_pitch_joint:    {max_velocity: 2.1, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
+  wam/wrist_yaw_joint:      {max_velocity: 2.1, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
+  wam/wrist_pitch_joint:    {max_velocity: 2.1, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
+  wam/palm_yaw_joint:       {max_velocity: 2.1, max_acceleration: 0.3, has_velocity_limits: true, has_acceleration_limits: true}
